@@ -10,7 +10,7 @@ export const useSignup = () => {
         setIsLoading(true)
         setError(null)
 
-        const response = await fetch('https://mern-test01-backend.onrender.com/api/user/signup', {
+        const response = await fetch(`${process.env.REACT_APP_API_ROUTE}/api/user/signup`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({email, password})
