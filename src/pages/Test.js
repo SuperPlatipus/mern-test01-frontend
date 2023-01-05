@@ -137,6 +137,7 @@ const Test = () => {
         test3dPoses.push(pose[0].keypoints3D)
         testPoses.push(pose[0].keypoints)
         frameCount++
+        console.log(performance.now())
         }
     }
     };
