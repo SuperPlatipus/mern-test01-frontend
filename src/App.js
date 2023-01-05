@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-
+import Test from './pages/Test';
 // Context
 
 import { useAuthContext } from './hooks/useAuthContext';
@@ -22,6 +22,10 @@ function App() {
         <Navbar />
         <div className="pages">
           <Routes>
+            <Route
+              path="/test"
+              element={ user ? <Test/> : <Navigate to="/login" />}
+            />
             <Route
               path="/"
               element={ user ? <Home /> : <Navigate to="/login" /> }
